@@ -1,0 +1,217 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+}
+#removeButton{
+    outline: none;
+    border: none;
+    background: transparent;
+    min-width: 8%;
+    cursor: pointer;
+    display: none;
+    margin-right: 4px;
+}
+li:hover #removeButton{
+    display: block;
+}
+.blue{
+    cursor: pointer;
+}
+ul{
+    width: 50%;
+    margin: 0px auto;
+    text-align: center;
+    margin-top: 20px;
+    border-radius: 6px;
+    overflow: hidden;
+}
+.todo{
+    display: flex;
+    text-align: left;
+    height: 50px;
+    opacity: 1;
+    border-bottom: 1px solid black;
+    background-color: white;
+    transition: all 1s;
+}
+.dark .todo{
+    background-color: hsl(237, 14%, 26%);
+}
+.dark .text{
+    color: white;
+}
+.dark .completed{
+    color: hsl(0, 0%, 60%);
+}
+
+.info1{
+    display: flex;
+    min-height: 30px;
+    cursor: default;
+    color: hsl(0, 0%, 70%);
+    background-color: white;
+    padding: 4px;
+    transition: all 1s;
+}
+.dark .info1{
+    background-color: hsl(237, 14%, 26%);
+}
+.info2{
+    display: none;
+    cursor: default;
+    color: hsl(0, 0%, 70%);
+}
+.info1 .leftcol{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+}
+.info1 .centercol{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 52%;
+    white-space: pre;
+}
+.info1 .rightcol{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28%;
+    transition: all 0.5s;
+}
+.row1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 40px;
+    background-color: white;
+    padding: 4px;
+    border-radius: 0 0 6px 6px;
+    transition: all 1s;
+}
+.row1 .rightcol{
+    transition: all 0.5s;
+}
+.row2{
+    display: flex;
+    justify-content: center;
+    gap: 26px;
+    align-items: center;
+    min-height: 40px;
+    margin-top: 20px;
+    background-color: white;
+    border-radius: 6px;
+    word-break: break-all;
+    transition: all 1s;
+}
+.dark .row1{
+    background-color: hsl(237, 14%, 26%);
+}
+.dark .row2{
+    background-color: hsl(237, 14%, 26%);
+}
+.left{
+    width: 92%;
+    height: 100%;
+    display: flex;
+    justify-content: left;
+    gap: 20px;
+    align-items: center;
+    word-break: normal;
+}
+.checkbox{
+    margin-left: 10px;
+    min-width: 26px;
+    height: 26px;
+    border-radius: 13px;
+    border: 2px solid hsl(0, 0%, 80%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.text{
+    width: 90%;
+    color: black;
+    cursor: default;
+}
+.completed{
+    color: hsl(0, 0%, 80%);
+    text-decoration: line-through;
+}
+.container{
+    min-height: 100vh;
+    padding: 30px;
+    transition: all 1s;
+}
+.light{
+    background: url(../images/bg-desktop-light.jpg), hsl(0, 0%, 94%);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.dark{
+    background: url(../images/bg-desktop-dark.jpg), hsl(235, 21%, 11%);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.top{
+    height: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    letter-spacing: 10px;
+    text-align: left;
+}
+.top p{
+    margin-bottom: 20px;
+    color: white;
+    font-weight: 700;
+}
+
+input{
+    border: none;
+    outline: none;
+    appearance: none;
+    background-color: white;
+    padding: 10px;
+    height: 50px;
+    border-radius: 6px;
+    width: 50%;
+    transition: all 1s;
+}
+.dark input{
+    background-color: hsl(237, 14%, 26%);
+    color: white;
+}
+.titlelogo{
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+}
+.titlelogo svg{
+    cursor: pointer;
+}
+@media screen and (max-width: 800px) {
+    .info1{
+        display: none;
+    }
+    .info2{
+        display: flex;
+        flex-direction: column;
+    }
+    input{
+        width: 80%;
+    }
+    ul{
+        width: 80%;
+    }
+    .top p{
+        width: 80%;
+    }
+}
